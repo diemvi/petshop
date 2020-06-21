@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PET SHOP</title>
+
+
+    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+
+
+    <link rel="stylesheet" href="style.css">
+    @if (IsSectionDefined("AddToHead"))
+    {
+        @RenderSection("AddToHead", required: false)
+    }
+
+    @RenderSection("AddToHeadAnotherWay", required: false)
+</head>
+<body>
+    <nav class="navbar-default navbar navbar-light" style="background-color:#FFA07A;height:45px;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <form class="visible-xs-inline-block" style="margin-top:10px">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+                <a href="~/Home/Home" class="navbar-brand" style="color:black;">PSOVN</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="~/Home/Home" class="home" style="color:black;">
+                            HOME <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" style="color:black" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">Shop<span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="color:black;">
+                            <li>
+                                <a href=" AppPage.html">Appliance</a>
+                            </li>
+                            <li><a href="MedPage.html">Medicines</a></li>
+                            <li><a href="FoodPage.html">Food</a></li>
+                            <li><a href="ToyPage.html">Toys</a></li>
+                            <li><a href="ClothePage.html">Clothes</a></li>
+                            <li><a href="SerPage.html">Services</a></li>
+                            <li><a href="PetPage.html">Pet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="~/Home/About" class="home" style="color:black;">About</a></li>
+                    <li><a href="~/Home/FAQ" class="home" style="color:black;">FAQ</a></li>
+                    <li><a href="~/Home/Contact" class="home" style="color:black;">Contact</a></li>
+                    <li><a href="~/Home/ShippingReturn" class="home" style="color:black;">More</a></li>
+
+                </ul>
+                <form class="navbar-form navbar-left hidden-xs">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button class="btn btn-link search-btn">
+                        <i class="glyphicon glyphicon-search"
+                           style="padding-bottom:15px;"></i>
+                    </button>
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    @Html.Partial("_LoginPartial")
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    @RenderBody()
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+
+<footer>
+    <div class="row1">
+
+        <div class="col-md-4">
+            <h6 class="font_6" style="text-align:center;"> <span class="color_18"> <span style="letter-spacing:0.45em;"> OUR STORE</span> </span> </h6>
+
+            <p class="font_8" style="line-height: 1.6em; text-align: center;"> <span class="color_18"> <span style="letter-spacing:0.02em;"> Address: 279 Nguyen Tri Phuong, Q10, tp.HCM</span> </span> </p>
+
+            <p class="font_8" style="line-height:1.6em; text-align:center;"> <span class="color_18"> <span style="letter-spacing:0.02em;"> Phone: 0937900900</span> </span> </p>
+
+            <p class="font_8" style="line-height:1.6em; text-align:center;"> <span class="color_18"> <span style="letter-spacing:0.02em;"> Email:&nbsp; <object height="0"> <a class="auto-generated-link" data-auto-recognition="true" data-content="PetshopNo1@gmail.com" href="mailto:PetshopNo1@gmail.com" data-type="mail"> PetshopNo1@gmail.com</a> </object> </span> </span> </p>
+
+        </div> <div class="col-md-4">
+            <h6 class="font_6" style="text-align:center;"> <span style="letter-spacing:0.45em;"> OPENING HOURS</span> </h6>
+            <p class="font_8" style="line-height:1.6em; text-align:center;">
+                <span style="letter-spacing:0.02em;">
+                    <a>
+                        Mon - Fri: 7am - 10pm<br>
+                        ​​Saturday: 8am - 10pm<br>
+                        ​Sunday: 8am - 11pm
+                    </a>
+                </span>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h6 class="font_6" style="text-align:center;"> <span style="letter-spacing:0.45em;"> HELP</span> </h6>
+            <p class="font_8" style="line-height:1.6em; text-align:center;"> <span style="text-decoration:underline;"> <a href="https://petshopforyou.wixsite.com/psovn/privacy-policy" target="_self"> <span style="letter-spacing:0.02em;"> Shipping &amp; Returns</span> </a> </span> </p>
+
+            <p class="font_8" style="line-height:1.6em; text-align:center;"> <span style="text-decoration:underline;"> <a href="https://petshopforyou.wixsite.com/psovn/faq" target="_self"> <span style="letter-spacing:0.02em;"> FAQ</span> </a> </span> </p>
+        </div>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6563695638256!2d106.66630401472594!3d10.76094449233207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ee4ecfa255d%3A0x9e5ec3fa6801b7d6!2zMjc5IE5ndXnhu4VuIFRyaSBQaMawxqFuZywgUGjGsOG7nW5nIDUsIFF14bqtbiAxMCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1588674156048!5m2!1svi!2s"
+            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</footer>
+</html>

@@ -1,0 +1,43 @@
+﻿@model data.ChiTietHoaDon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ChiTietHoaDon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IDsp.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDsp.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaHD.MaHoaDon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaHD.MaHoaDon)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
